@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { CreateBookDto } from './dto/create-book.dto';
-import { UpdateBookDto } from './dto/update-book.dto';
-import { BookDto } from './dto/book.dto';
+import { BookDto } from 'libs/contracts/books/book.dto';
+import { CreateBookDto } from 'libs/contracts/books/create-book.dto';
+import { UpdateBookDto } from 'libs/contracts/books/update-book.dto';
 
 @Injectable()
 export class BooksService {
@@ -40,7 +40,7 @@ export class BooksService {
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
-    return `This action updates a #${id} book`;
+    return `This action updates a #${id} book with data`;
   }
 
   remove(id: number) {
